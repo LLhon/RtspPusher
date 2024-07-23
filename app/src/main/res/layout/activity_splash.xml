@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/colorPrimary"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/cl_startup"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    android:layout_gravity="center">
+
+    <com.github.ybq.android.spinkit.SpinKitView
+      android:id="@+id/spinkitView"
+      android:layout_width="@dimen/dp_160"
+      android:layout_height="@dimen/dp_160"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      style="@style/SpinKitView.FadingCircle"
+      app:SpinKit_Color="@color/DBCFFF"/>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/dp_12"
+      app:layout_constraintTop_toBottomOf="@id/spinkitView"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      android:textSize="@dimen/sp_14"
+      android:textColor="@color/white"
+      android:text="正在启动中，请稍候..."/>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <FrameLayout
+    android:id="@+id/clUnAuthLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+
+    <com.allen.library.shape.ShapeConstraintLayout
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_marginTop="@dimen/dp_30"
+      android:layout_marginBottom="@dimen/dp_30"
+      android:paddingStart="@dimen/dp_70"
+      android:paddingEnd="@dimen/dp_70"
+      android:layout_gravity="center"
+      app:shapeStrokeWidth="@dimen/dp_2"
+      app:shapeStrokeColor="@color/DBCFFF"
+      app:shapeCornersRadius="@dimen/dp_15">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_40"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <TextView
+          android:id="@+id/tvBind"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          android:textSize="@dimen/sp_28"
+          android:textColor="@color/white"
+          android:textStyle="bold"
+          android:text="@string/machine_bind_title"/>
+
+        <com.allen.library.shape.ShapeTextView
+          android:id="@+id/tvDeviceId"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintTop_toBottomOf="@id/tvBind"
+          app:layout_constraintStart_toStartOf="parent"
+          app:shapeSolidColor="@color/DBCFFF"
+          app:shapeCornersRadius="@dimen/dp_15"
+          android:layout_marginTop="@dimen/dp_20"
+          android:paddingLeft="@dimen/dp_12"
+          android:paddingTop="@dimen/dp_5"
+          android:paddingRight="@dimen/dp_12"
+          android:paddingBottom="@dimen/dp_5"
+          android:textSize="@dimen/sp_17"
+          android:textColor="@color/black"
+          android:text="@string/machine_bind_device_id"/>
+
+        <TextView
+          android:id="@+id/tvBindPath"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/dp_15"
+          app:layout_constraintTop_toBottomOf="@id/tvDeviceId"
+          app:layout_constraintStart_toStartOf="parent"
+          android:textSize="@dimen/sp_15"
+          android:textColor="@color/white"
+          android:text="@string/machine_bind_path"/>
+
+        <TextView
+          android:id="@+id/tvBindAddress"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingStart="@dimen/dp_25"
+          android:paddingEnd="@dimen/dp_10"
+          android:paddingTop="@dimen/dp_5"
+          android:paddingBottom="@dimen/dp_5"
+          android:layout_marginTop="@dimen/dp_10"
+          app:layout_constraintTop_toBottomOf="@id/tvBindPath"
+          app:layout_constraintStart_toStartOf="parent"
+          android:textSize="@dimen/sp_15"
+          android:textColor="@color/DBCFFF"
+          android:text="@string/machine_bind_address"/>
+
+        <TextView
+          android:id="@+id/tvBindNet"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/dp_15"
+          app:layout_constraintTop_toBottomOf="@id/tvBindAddress"
+          app:layout_constraintStart_toStartOf="parent"
+          android:textSize="@dimen/sp_15"
+          android:textColor="@color/white"
+          android:text="@string/machine_bind_net_config"/>
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+      <com.allen.library.shape.ShapeTextView
+        android:id="@+id/tvStartConfig"
+        android:layout_width="@dimen/dp_130"
+        android:layout_height="@dimen/dp_37"
+        android:layout_marginBottom="@dimen/dp_60"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:shapeSolidColor="@color/DBCFFF"
+        app:shapeCornersRadius="@dimen/dp_20"
+        android:gravity="center"
+        android:textSize="@dimen/sp_17"
+        android:textColor="@color/black"
+        android:text="@string/machine_start_config"/>
+
+    </com.allen.library.shape.ShapeConstraintLayout>
+
+  </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <Button
+    android:id="@+id/btnVersion"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:text="版本信息"/>
+
+  <Button
+    android:id="@+id/btnAvcodec"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    app:layout_constraintTop_toTopOf="@id/btnVersion"
+    app:layout_constraintStart_toEndOf="@id/btnVersion"
+    android:text="编解码格式"/>
+
+  <androidx.constraintlayout.helper.widget.Flow
+    android:id="@+id/flow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/btnVersion"
+    app:layout_constraintStart_toStartOf="parent"
+    android:orientation="horizontal"
+    app:constraint_referenced_ids="btnPushAll,btnPush32All,btnPush1,btnPush2,btnPush3,btnPush4,btnPush5,btnPush6,btnPush7,btnPush8,btnPush9,btnPush10,btnPush11,btnPush12,btnPush13,btnPush14,btnPush15,btnPush16,btnPush17,btnPush18,btnPush19,btnPush20,btnPush21,btnPush22,btnPush23,btnPush24,btnPush25,btnPush26,btnPush27,btnPush28,btnPush29,btnPush30,btnPush31,btnPush32,btnStopPush1,btnStopPush2,btnStopPush3,btnStopPush4,btnStopPush5,btnStopPush6,btnStopPush7,btnStopPush8,btnStopPush9,btnStopPush10,btnStopPush11,btnStopPush12,btnStopPush13,btnStopPush14,btnStopPush15,btnStopPush16"
+    app:flow_wrapMode="chain"
+    app:flow_horizontalStyle="spread"
+    app:flow_horizontalAlign="start"
+    />
+
+  <Button
+    android:id="@+id/btnPushAll"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推多路流"/>
+
+  <Button
+    android:id="@+id/btnPush32All"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推多32路流"/>
+
+  <Button
+    android:id="@+id/btnPush1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推1路流"/>
+
+  <Button
+    android:id="@+id/btnPush2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推2路流"/>
+
+  <Button
+    android:id="@+id/btnPush3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推3路流"/>
+
+  <Button
+    android:id="@+id/btnPush4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推4路流"/>
+
+  <Button
+    android:id="@+id/btnPush5"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推5路流"/>
+
+  <Button
+    android:id="@+id/btnPush6"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推6路流"/>
+
+  <Button
+    android:id="@+id/btnPush7"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推7路流"/>
+
+  <Button
+    android:id="@+id/btnPush8"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推8路流"/>
+
+  <Button
+    android:id="@+id/btnPush9"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推9路流"/>
+
+  <Button
+    android:id="@+id/btnPush10"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推10路流"/>
+
+  <Button
+    android:id="@+id/btnPush11"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推11路流"/>
+
+  <Button
+    android:id="@+id/btnPush12"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推12路流"/>
+
+  <Button
+    android:id="@+id/btnPush13"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推13路流"/>
+
+  <Button
+    android:id="@+id/btnPush14"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推14路流"/>
+
+  <Button
+    android:id="@+id/btnPush15"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推15路流"/>
+
+  <Button
+    android:id="@+id/btnPush16"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推16路流"/>
+
+  <Button
+    android:id="@+id/btnPush17"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推17路流"/>
+
+  <Button
+    android:id="@+id/btnPush18"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推18路流"/>
+
+  <Button
+    android:id="@+id/btnPush19"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推19路流"/>
+
+  <Button
+    android:id="@+id/btnPush20"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推20路流"/>
+
+  <Button
+    android:id="@+id/btnPush21"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推21路流"/>
+
+  <Button
+    android:id="@+id/btnPush22"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推22路流"/>
+
+  <Button
+    android:id="@+id/btnPush23"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推23路流"/>
+
+  <Button
+    android:id="@+id/btnPush24"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推24路流"/>
+
+  <Button
+    android:id="@+id/btnPush25"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推25路流"/>
+
+  <Button
+    android:id="@+id/btnPush26"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推26路流"/>
+
+  <Button
+    android:id="@+id/btnPush27"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推27路流"/>
+
+  <Button
+    android:id="@+id/btnPush28"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推28路流"/>
+
+  <Button
+    android:id="@+id/btnPush29"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推29路流"/>
+
+  <Button
+    android:id="@+id/btnPush30"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推30路流"/>
+
+  <Button
+    android:id="@+id/btnPush31"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推31路流"/>
+
+  <Button
+    android:id="@+id/btnPush32"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="推32路流"/>
+
+  <Button
+    android:id="@+id/btnStopPush1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="停止推1路流"/>
+
+  <Button
+    android:id="@+id/btnStopPush2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="停止推2路流"/>
+
+  <Button
+    android:id="@+id/btnStopPush3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="停止推3路流"/>
+
+  <Button
+    android:id="@+id/btnStopPush4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="停止推4路流"/>
+
+  <Button
+    android:id="@+id/btnStopPush5"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="停止推5路流"/>
+
+  <Button
+    android:id="@+id/btnStopPush6"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="停止推6路流"/>
+
+  <Button
+    android:id="@+id/btnStopPush7"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="停止推7路流"/>
+
+  <Button
+    android:id="@+id/btnStopPush8"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="停止推8路流"/>
+
+  <Button
+    android:id="@+id/btnStopPush9"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="停止推9路流"/>
+
+  <Button
+    android:id="@+id/btnStopPush10"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="停止推10路流"/>
+
+  <Button
+    android:id="@+id/btnStopPush11"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="停止推11路流"/>
+
+  <Button
+    android:id="@+id/btnStopPush12"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="停止推12路流"/>
+
+  <Button
+    android:id="@+id/btnStopPush13"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="停止推13路流"/>
+
+  <Button
+    android:id="@+id/btnStopPush14"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="停止推14路流"/>
+
+  <Button
+    android:id="@+id/btnStopPush15"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="停止推15路流"/>
+
+  <Button
+    android:id="@+id/btnStopPush16"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="停止推16路流"/>
+
+  <TextView
+    android:id="@+id/tvInfo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/flow"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginTop="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

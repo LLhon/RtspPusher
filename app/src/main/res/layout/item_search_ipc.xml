@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="@dimen/dp_25"
+  android:gravity="center_vertical"
+  android:orientation="horizontal">
+
+  <TextView
+    android:id="@+id/tvChannelNo"
+    android:layout_width="@dimen/dp_50"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/dp_10"
+    android:gravity="start"
+    android:textColor="@color/white"
+    android:textSize="@dimen/sp_12"
+    tools:text="1"/>
+
+  <TextView
+    android:id="@+id/tvIp"
+    android:layout_width="@dimen/dp_120"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/dp_10"
+    android:gravity="start"
+    android:textColor="@color/white"
+    android:textSize="@dimen/sp_12"
+    tools:text="192.168.6.172"/>
+
+  <FrameLayout
+    android:layout_width="@dimen/dp_50"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/dp_10">
+
+    <ImageView
+      android:id="@+id/ivStatus"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/ic_online"/>
+
+  </FrameLayout>
+
+  <TextView
+    android:id="@+id/tvProtocol"
+    android:layout_width="@dimen/dp_120"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/dp_10"
+    android:gravity="start"
+    android:textColor="@color/white"
+    android:textSize="@dimen/sp_12"
+    tools:text="ONVIF(未知品牌)"/>
+
+  <TextView
+    android:id="@+id/tvPort"
+    android:layout_width="@dimen/dp_70"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/dp_10"
+    android:gravity="start"
+    android:textColor="@color/white"
+    android:textSize="@dimen/sp_12"
+    android:text="80"/>
+
+  <TextView
+    android:id="@+id/tvDeviceType"
+    android:layout_width="@dimen/dp_100"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/dp_10"
+    android:gravity="start"
+    android:textColor="@color/white"
+    android:textSize="@dimen/sp_12"
+    android:text="IPC"/>
+
+  <TextView
+    android:id="@+id/tvSerialNo"
+    android:layout_width="@dimen/dp_100"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    android:paddingStart="@dimen/dp_10"
+    android:gravity="start"
+    android:textColor="@color/white"
+    android:textSize="@dimen/sp_12"
+    tools:text="序列号"/>
+
+</LinearLayout>

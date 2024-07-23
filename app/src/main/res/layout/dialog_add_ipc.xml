@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.allen.library.shape.ShapeLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="@dimen/dp_500"
+  android:layout_height="wrap_content"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:background="@color/colorPrimary"
+  android:layout_gravity="center"
+  android:orientation="vertical"
+  app:shapeStrokeColor="@color/divider_line"
+  app:shapeStrokeWidth="1dp"
+  app:shapeSolidColor="@color/colorPrimary">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_35"
+    android:paddingStart="@dimen/dp_10"
+    android:paddingEnd="@dimen/dp_10">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      android:textSize="@dimen/sp_14"
+      android:textColor="@color/white"
+      android:text="自定义添加IP通道"/>
+
+    <ImageView
+      android:id="@+id/ivCancel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:src="@drawable/ic_cancel"/>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/divider_line"/>
+
+  <TextView
+    android:id="@+id/tvRefresh"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_8"
+    android:layout_marginStart="@dimen/dp_10"
+    android:drawableLeft="@drawable/ic_refresh"
+    android:drawablePadding="@dimen/dp_5"
+    android:gravity="center"
+    android:textSize="@dimen/sp_14"
+    android:textColor="@color/white"
+    android:text="刷新"/>
+
+  <HorizontalScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_8"
+    android:layout_marginStart="3dp"
+    android:layout_marginEnd="3dp"
+    android:fillViewport="true"
+    android:scrollbars="horizontal"
+    android:scrollbarFadeDuration="0"
+    android:fadeScrollbars="false"
+    android:scrollbarSize="@dimen/dp_8"
+    android:scrollbarThumbHorizontal="@color/DBCFFF"
+    >
+
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:paddingBottom="@dimen/dp_10"
+      android:orientation="vertical">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_25"
+        android:background="@color/FF3F51B5">
+
+        <LinearLayout
+          android:id="@+id/llChannel"
+          android:layout_width="@dimen/dp_50"
+          android:layout_height="match_parent"
+          android:paddingStart="@dimen/dp_5"
+          android:gravity="center_vertical"
+          android:orientation="horizontal">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/shape_ver_line"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            android:text="序号"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:id="@+id/llIp"
+          android:layout_width="@dimen/dp_120"
+          android:layout_height="match_parent"
+          android:paddingStart="@dimen/dp_5"
+          android:gravity="center_vertical"
+          android:orientation="horizontal">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/shape_ver_line"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            android:text="IP地址"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:id="@+id/llStatus"
+          android:layout_width="@dimen/dp_50"
+          android:layout_height="match_parent"
+          android:paddingStart="@dimen/dp_5"
+          android:gravity="center_vertical"
+          android:orientation="horizontal">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/shape_ver_line"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            android:text="状态"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:id="@+id/llProtocol"
+          android:layout_width="@dimen/dp_120"
+          android:layout_height="match_parent"
+          android:paddingStart="@dimen/dp_5"
+          android:gravity="center_vertical"
+          android:orientation="horizontal">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/shape_ver_line"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            android:text="协议(品牌)"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:id="@+id/llPort"
+          android:layout_width="@dimen/dp_70"
+          android:layout_height="match_parent"
+          android:paddingStart="@dimen/dp_5"
+          android:gravity="center_vertical"
+          android:orientation="horizontal">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/shape_ver_line"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            android:text="管理端口"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:id="@+id/llType"
+          android:layout_width="@dimen/dp_100"
+          android:layout_height="match_parent"
+          android:paddingStart="@dimen/dp_5"
+          android:gravity="center_vertical"
+          android:orientation="horizontal">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/shape_ver_line"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            android:text="设备类型"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+          android:id="@+id/llSerialNo"
+          android:layout_width="@dimen/dp_100"
+          android:layout_height="match_parent"
+          android:visibility="gone"
+          android:paddingStart="@dimen/dp_5"
+          android:gravity="center_vertical"
+          android:orientation="horizontal">
+
+          <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/shape_ver_line"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            android:text="序列号"/>
+
+        </LinearLayout>
+
+      </LinearLayout>
+
+      <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_90"
+        android:scrollbars="vertical"
+        android:scrollbarFadeDuration="0"
+        android:fadeScrollbars="false"
+        android:scrollbarSize="@dimen/dp_8"
+        android:scrollbarThumbVertical="@color/DBCFFF"
+        tools:listitem="@layout/item_search_ipc"
+        />
+
+    </LinearLayout>
+
+  </HorizontalScrollView>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_15">
+
+    <com.allen.library.shape.ShapeFrameLayout
+      android:id="@+id/flIpAddress"
+      android:layout_width="@dimen/dp_220"
+      android:layout_height="@dimen/dp_25"
+      android:paddingStart="@dimen/dp_10"
+      android:paddingEnd="@dimen/dp_10"
+      android:layout_marginEnd="50dp"
+      app:shapeStrokeWidth="1dp"
+      app:shapeStrokeColor="@color/divider_line"
+      app:shapeSolidColor="@color/colorPrimaryVariant"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintEnd_toEndOf="parent">
+
+<!--      <EditText-->
+<!--        android:id="@+id/etIp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_vertical"-->
+<!--        android:background="@null"-->
+<!--        android:textSize="@dimen/sp_12"-->
+<!--        android:textColor="@color/white"/>-->
+
+      <com.ancda.rtsppusher.view.lazykeyboard.SecurityEditText
+        android:id="@+id/etIp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/sp_12"
+        android:textColor="@color/white"
+        android:background="@null"
+        android:hint=""
+        app:chooserSelectedColor="@color/white"
+        app:chooserUnselectedColor="#999999"
+        app:keyboardMode="0"
+        />
+
+    </com.allen.library.shape.ShapeFrameLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="15dp"
+      app:layout_constraintEnd_toStartOf="@id/flIpAddress"
+      app:layout_constraintTop_toTopOf="@id/flIpAddress"
+      app:layout_constraintBottom_toBottomOf="@id/flIpAddress"
+      android:textSize="@dimen/sp_14"
+      android:textColor="@color/white"
+      android:text="IP通道地址"/>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+
+    <com.allen.library.shape.ShapeFrameLayout
+      android:id="@+id/flProtocol"
+      android:layout_width="@dimen/dp_220"
+      android:layout_height="@dimen/dp_25"
+      android:paddingStart="@dimen/dp_10"
+      android:paddingEnd="@dimen/dp_10"
+      android:layout_marginEnd="50dp"
+      app:shapeStrokeWidth="1dp"
+      app:shapeStrokeColor="@color/divider_line"
+      app:shapeSolidColor="@color/colorPrimaryVariant"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintEnd_toEndOf="parent">
+
+      <TextView
+        android:id="@+id/tvProtocol"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/sp_12"
+        android:textColor="@color/white"
+        android:text="ONVIF"/>
+
+      <ImageView
+        android:id="@+id/ivProtocolArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:src="@drawable/ic_down_arrow"/>
+
+    </com.allen.library.shape.ShapeFrameLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="15dp"
+      app:layout_constraintEnd_toStartOf="@id/flProtocol"
+      app:layout_constraintTop_toTopOf="@id/flProtocol"
+      app:layout_constraintBottom_toBottomOf="@id/flProtocol"
+      android:textSize="@dimen/sp_14"
+      android:textColor="@color/white"
+      android:text="协议"/>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+
+    <com.allen.library.shape.ShapeFrameLayout
+      android:id="@+id/flPort"
+      android:layout_width="@dimen/dp_220"
+      android:layout_height="@dimen/dp_25"
+      android:paddingStart="@dimen/dp_10"
+      android:paddingEnd="@dimen/dp_10"
+      android:layout_marginEnd="50dp"
+      app:shapeStrokeWidth="1dp"
+      app:shapeStrokeColor="@color/divider_line"
+      app:shapeSolidColor="@color/colorPrimaryVariant"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintEnd_toEndOf="parent">
+
+<!--      <EditText-->
+<!--        android:id="@+id/etPort"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_vertical"-->
+<!--        android:background="@null"-->
+<!--        android:textSize="@dimen/sp_12"-->
+<!--        android:textColor="@color/white"/>-->
+
+      <com.ancda.rtsppusher.view.lazykeyboard.SecurityEditText
+        android:id="@+id/etPort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/sp_12"
+        android:textColor="@color/white"
+        android:background="@null"
+        android:hint=""
+        app:chooserSelectedColor="@color/white"
+        app:chooserUnselectedColor="#999999"
+        app:keyboardMode="0"
+        />
+
+    </com.allen.library.shape.ShapeFrameLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="15dp"
+      app:layout_constraintEnd_toStartOf="@id/flPort"
+      app:layout_constraintTop_toTopOf="@id/flPort"
+      app:layout_constraintBottom_toBottomOf="@id/flPort"
+      android:textSize="@dimen/sp_14"
+      android:textColor="@color/white"
+      android:text="管理端口"/>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+
+    <com.allen.library.shape.ShapeFrameLayout
+      android:id="@+id/flTransport"
+      android:layout_width="@dimen/dp_220"
+      android:layout_height="@dimen/dp_25"
+      android:paddingStart="@dimen/dp_10"
+      android:paddingEnd="@dimen/dp_10"
+      android:layout_marginEnd="50dp"
+      app:shapeStrokeWidth="1dp"
+      app:shapeStrokeColor="@color/divider_line"
+      app:shapeSolidColor="@color/colorPrimaryVariant"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintEnd_toEndOf="parent">
+
+      <TextView
+        android:id="@+id/tvTransport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/sp_12"
+        android:textColor="@color/white"
+        android:text="自动"/>
+
+      <ImageView
+        android:id="@+id/ivTransportArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:src="@drawable/ic_down_arrow"/>
+
+    </com.allen.library.shape.ShapeFrameLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="15dp"
+      app:layout_constraintEnd_toStartOf="@id/flTransport"
+      app:layout_constraintTop_toTopOf="@id/flTransport"
+      app:layout_constraintBottom_toBottomOf="@id/flTransport"
+      android:textSize="@dimen/sp_14"
+      android:textColor="@color/white"
+      android:text="传输协议"/>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+
+    <com.allen.library.shape.ShapeFrameLayout
+      android:id="@+id/flAccount"
+      android:layout_width="@dimen/dp_220"
+      android:layout_height="@dimen/dp_25"
+      android:paddingStart="@dimen/dp_10"
+      android:paddingEnd="@dimen/dp_10"
+      android:layout_marginEnd="50dp"
+      app:shapeStrokeWidth="1dp"
+      app:shapeStrokeColor="@color/divider_line"
+      app:shapeSolidColor="@color/colorPrimaryVariant"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintEnd_toEndOf="parent">
+
+<!--      <EditText-->
+<!--        android:id="@+id/etAccount"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_vertical"-->
+<!--        android:background="@null"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="@dimen/sp_12"-->
+<!--        android:text="admin"/>-->
+
+      <com.ancda.rtsppusher.view.lazykeyboard.SecurityEditText
+        android:id="@+id/etAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/sp_12"
+        android:textColor="@color/white"
+        android:background="@null"
+        android:hint=""
+        android:text="admin"
+        app:chooserSelectedColor="@color/white"
+        app:chooserUnselectedColor="#999999"
+        />
+
+    </com.allen.library.shape.ShapeFrameLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="15dp"
+      app:layout_constraintEnd_toStartOf="@id/flAccount"
+      app:layout_constraintTop_toTopOf="@id/flAccount"
+      app:layout_constraintBottom_toBottomOf="@id/flAccount"
+      android:textSize="@dimen/sp_14"
+      android:textColor="@color/white"
+      android:text="用户名"/>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+
+    <com.allen.library.shape.ShapeFrameLayout
+      android:id="@+id/flPassword"
+      android:layout_width="@dimen/dp_220"
+      android:layout_height="@dimen/dp_25"
+      android:paddingStart="@dimen/dp_10"
+      android:paddingEnd="@dimen/dp_10"
+      android:layout_marginEnd="50dp"
+      app:shapeStrokeWidth="1dp"
+      app:shapeStrokeColor="@color/divider_line"
+      app:shapeSolidColor="@color/colorPrimaryVariant"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintEnd_toEndOf="parent">
+
+<!--      <EditText-->
+<!--        android:id="@+id/etPassword"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_vertical"-->
+<!--        android:background="@null"-->
+<!--        android:textSize="@dimen/sp_12"-->
+<!--        android:textColor="@color/white"/>-->
+
+      <com.ancda.rtsppusher.view.lazykeyboard.SecurityEditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/sp_12"
+        android:textColor="@color/white"
+        android:background="@null"
+        android:hint=""
+        android:inputType="textPassword"
+        app:chooserSelectedColor="@color/white"
+        app:chooserUnselectedColor="#999999"
+        />
+
+    </com.allen.library.shape.ShapeFrameLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="15dp"
+      app:layout_constraintEnd_toStartOf="@id/flPassword"
+      app:layout_constraintTop_toTopOf="@id/flPassword"
+      app:layout_constraintBottom_toBottomOf="@id/flPassword"
+      android:textSize="@dimen/sp_14"
+      android:textColor="@color/white"
+      android:text="摄像机密码"/>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_marginTop="@dimen/dp_50"
+    android:background="@color/divider_line"/>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp_10">
+
+    <com.allen.library.shape.ShapeTextView
+      android:id="@+id/tvCancel"
+      android:layout_width="@dimen/dp_70"
+      android:layout_height="@dimen/dp_25"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:textSize="@dimen/sp_14"
+      android:textColor="@color/white"
+      android:text="取消"
+      android:gravity="center"
+      app:shapeStrokeWidth="1dp"
+      app:shapeStrokeColor="@color/divider_line"/>
+
+    <com.allen.library.shape.ShapeTextView
+      android:id="@+id/tvAdd"
+      android:layout_width="@dimen/dp_70"
+      android:layout_height="@dimen/dp_25"
+      android:layout_marginEnd="@dimen/dp_10"
+      app:layout_constraintEnd_toStartOf="@id/tvCancel"
+      app:layout_constraintTop_toTopOf="parent"
+      android:textSize="@dimen/sp_14"
+      android:textColor="@color/white"
+      android:text="添加"
+      android:gravity="center"
+      app:shapeSolidColor="@color/FF03A9F4"/>
+
+    <com.allen.library.shape.ShapeTextView
+      android:id="@+id/tvContinueAdd"
+      android:layout_width="@dimen/dp_70"
+      android:layout_height="@dimen/dp_25"
+      android:layout_marginEnd="@dimen/dp_10"
+      app:layout_constraintEnd_toStartOf="@id/tvAdd"
+      app:layout_constraintTop_toTopOf="parent"
+      android:textSize="@dimen/sp_14"
+      android:textColor="@color/white"
+      android:text="继续添加"
+      android:gravity="center"
+      app:shapeStrokeWidth="1dp"
+      app:shapeStrokeColor="@color/divider_line"/>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.allen.library.shape.ShapeLinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.allen.library.shape.ShapeFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="@dimen/dp_220"
+  android:layout_height="wrap_content"
+  android:maxHeight="@dimen/dp_400"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  app:shapeStrokeWidth="1dp"
+  app:shapeStrokeColor="@color/divider_line"
+  app:shapeSolidColor="@color/colorPrimary">
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:listitem="@layout/item_option"/>
+
+</com.allen.library.shape.ShapeFrameLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:paddingStart="@dimen/dp_80"
+  android:paddingTop="@dimen/dp_20"
+  android:background="@color/colorPrimaryVariant"
+  android:orientation="vertical"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <com.allen.library.shape.ShapeFrameLayout
+      android:id="@+id/flDeviceName"
+      android:layout_width="@dimen/dp_130"
+      android:layout_height="@dimen/dp_22"
+      android:layout_marginTop="@dimen/dp_10"
+      android:paddingStart="@dimen/dp_10"
+      android:paddingEnd="@dimen/dp_10"
+      app:shapeStrokeWidth="@dimen/dp_0_5"
+      app:shapeStrokeColor="@color/white"
+      app:shapeSolidColor="@color/colorPrimaryVariant"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintEnd_toEndOf="parent">
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/sp_11"
+        android:textColor="@color/white"
+        android:text="掌心宝贝NVR"
+        />
+
+    </com.allen.library.shape.ShapeFrameLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/dp_10"
+      app:layout_constraintEnd_toStartOf="@id/flDeviceName"
+      app:layout_constraintTop_toTopOf="@id/flDeviceName"
+      app:layout_constraintBottom_toBottomOf="@id/flDeviceName"
+      android:textSize="@dimen/sp_13"
+      android:textColor="@color/white"
+      android:text="设备名称"/>
+
+    <com.allen.library.shape.ShapeFrameLayout
+      android:id="@+id/flDeviceId"
+      android:layout_width="@dimen/dp_130"
+      android:layout_height="@dimen/dp_22"
+      android:layout_marginTop="@dimen/dp_10"
+      android:paddingStart="@dimen/dp_10"
+      android:paddingEnd="@dimen/dp_10"
+      app:shapeStrokeWidth="@dimen/dp_0_5"
+      app:shapeStrokeColor="@color/white"
+      app:shapeSolidColor="@color/colorPrimaryVariant"
+      app:layout_constraintTop_toBottomOf="@id/flDeviceName"
+      app:layout_constraintEnd_toEndOf="parent">
+
+      <TextView
+        android:id="@+id/tvDeviceId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/sp_11"
+        android:textColor="@color/white"
+        android:text=""
+        />
+
+    </com.allen.library.shape.ShapeFrameLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/dp_10"
+      app:layout_constraintEnd_toStartOf="@id/flDeviceId"
+      app:layout_constraintTop_toTopOf="@id/flDeviceId"
+      app:layout_constraintBottom_toBottomOf="@id/flDeviceId"
+      android:textSize="@dimen/sp_13"
+      android:textColor="@color/white"
+      android:text="设备编号"/>
+
+    <com.allen.library.shape.ShapeFrameLayout
+      android:id="@+id/flSleepTime"
+      android:layout_width="@dimen/dp_130"
+      android:layout_height="@dimen/dp_22"
+      android:layout_marginTop="@dimen/dp_10"
+      android:paddingStart="@dimen/dp_10"
+      android:paddingEnd="@dimen/dp_10"
+      app:shapeStrokeWidth="@dimen/dp_0_5"
+      app:shapeStrokeColor="@color/white"
+      app:shapeSolidColor="@color/colorPrimaryVariant"
+      app:layout_constraintTop_toBottomOf="@id/flDeviceId"
+      app:layout_constraintEnd_toEndOf="parent">
+
+      <TextView
+        android:id="@+id/tvSleepTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/sp_11"
+        android:textColor="@color/white"
+        android:text="5分钟"
+        />
+
+      <ImageView
+        android:id="@+id/ivDownArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:src="@drawable/ic_down_arrow"/>
+
+    </com.allen.library.shape.ShapeFrameLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/dp_10"
+      app:layout_constraintEnd_toStartOf="@id/flSleepTime"
+      app:layout_constraintTop_toTopOf="@id/flSleepTime"
+      app:layout_constraintBottom_toBottomOf="@id/flSleepTime"
+      android:textSize="@dimen/sp_13"
+      android:textColor="@color/white"
+      android:text="屏幕保护时间"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btnConfirm"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@color/FF03A9F4"
+      android:layout_marginTop="@dimen/dp_50"
+      app:layout_constraintTop_toBottomOf="@id/flSleepTime"
+      app:layout_constraintStart_toStartOf="@id/flSleepTime"
+      android:textColor="@color/white"
+      android:textSize="@dimen/sp_13"
+      android:text="应用"/>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

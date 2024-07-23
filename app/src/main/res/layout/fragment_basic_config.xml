@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:paddingStart="@dimen/dp_80"
+  android:paddingTop="@dimen/dp_20"
+  android:background="@color/colorPrimaryVariant"
+  android:orientation="vertical"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+  <com.allen.library.shape.ShapeFrameLayout
+    android:id="@+id/flLanguage"
+    android:layout_width="@dimen/dp_130"
+    android:layout_height="@dimen/dp_22"
+    android:layout_marginTop="@dimen/dp_10"
+    android:paddingStart="@dimen/dp_10"
+    android:paddingEnd="@dimen/dp_10"
+    app:shapeStrokeWidth="@dimen/dp_1"
+    app:shapeStrokeColor="@color/white"
+    app:shapeSolidColor="@color/colorPrimaryVariant"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <TextView
+      android:id="@+id/tvLanguage"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_vertical"
+      android:textSize="@dimen/sp_11"
+      android:textColor="@color/white"
+      android:text="简体中文"
+      />
+
+  </com.allen.library.shape.ShapeFrameLayout>
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/dp_10"
+    app:layout_constraintEnd_toStartOf="@id/flLanguage"
+    app:layout_constraintTop_toTopOf="@id/flLanguage"
+    app:layout_constraintBottom_toBottomOf="@id/flLanguage"
+    android:textSize="@dimen/sp_13"
+    android:textColor="@color/white"
+    android:text="语言"/>
+
+    <com.allen.library.shape.ShapeFrameLayout
+      android:id="@+id/flTimeZone"
+      android:layout_width="@dimen/dp_130"
+      android:layout_height="@dimen/dp_22"
+      android:layout_marginTop="@dimen/dp_10"
+      android:paddingStart="@dimen/dp_10"
+      android:paddingEnd="@dimen/dp_10"
+      app:shapeStrokeWidth="@dimen/dp_1"
+      app:shapeStrokeColor="@color/white"
+      app:shapeSolidColor="@color/colorPrimaryVariant"
+      app:layout_constraintTop_toBottomOf="@id/flLanguage"
+      app:layout_constraintEnd_toEndOf="parent">
+
+      <TextView
+        android:id="@+id/tvTimeZone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/sp_11"
+        android:textColor="@color/white"
+        android:text=""
+        />
+
+      <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:src="@drawable/ic_down_arrow"/>
+
+    </com.allen.library.shape.ShapeFrameLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/dp_10"
+      app:layout_constraintEnd_toStartOf="@id/flTimeZone"
+      app:layout_constraintTop_toTopOf="@id/flTimeZone"
+      app:layout_constraintBottom_toBottomOf="@id/flTimeZone"
+      android:textSize="@dimen/sp_13"
+      android:textColor="@color/white"
+      android:text="时区"/>
+
+    <com.allen.library.shape.ShapeFrameLayout
+      android:id="@+id/flDateFormat"
+      android:layout_width="@dimen/dp_130"
+      android:layout_height="@dimen/dp_22"
+      android:visibility="gone"
+      android:layout_marginTop="@dimen/dp_10"
+      android:paddingStart="@dimen/dp_10"
+      android:paddingEnd="@dimen/dp_10"
+      app:shapeStrokeWidth="@dimen/dp_1"
+      app:shapeStrokeColor="@color/white"
+      app:shapeSolidColor="@color/colorPrimaryVariant"
+      app:layout_constraintTop_toBottomOf="@id/flTimeZone"
+      app:layout_constraintEnd_toEndOf="parent">
+
+      <TextView
+        android:id="@+id/tvDateFormat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/sp_11"
+        android:textColor="@color/white"
+        android:text=""
+        />
+
+    </com.allen.library.shape.ShapeFrameLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/dp_10"
+      android:visibility="gone"
+      app:layout_constraintEnd_toStartOf="@id/flDateFormat"
+      app:layout_constraintTop_toTopOf="@id/flDateFormat"
+      app:layout_constraintBottom_toBottomOf="@id/flDateFormat"
+      android:textSize="@dimen/sp_13"
+      android:textColor="@color/white"
+      android:text="日期格式"/>
+
+    <com.allen.library.shape.ShapeFrameLayout
+      android:id="@+id/flDate"
+      android:layout_width="@dimen/dp_130"
+      android:layout_height="@dimen/dp_22"
+      android:layout_marginTop="@dimen/dp_10"
+      android:paddingStart="@dimen/dp_10"
+      android:paddingEnd="@dimen/dp_10"
+      app:shapeStrokeWidth="@dimen/dp_1"
+      app:shapeStrokeColor="@color/white"
+      app:shapeSolidColor="@color/colorPrimaryVariant"
+      app:layout_constraintTop_toBottomOf="@id/flDateFormat"
+      app:layout_constraintEnd_toEndOf="parent">
+
+      <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/sp_11"
+        android:textColor="@color/white"
+        android:text=""
+        />
+
+      <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:src="@drawable/ic_calendar"/>
+
+    </com.allen.library.shape.ShapeFrameLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/dp_10"
+      app:layout_constraintEnd_toStartOf="@id/flDate"
+      app:layout_constraintTop_toTopOf="@id/flDate"
+      app:layout_constraintBottom_toBottomOf="@id/flDate"
+      android:textSize="@dimen/sp_13"
+      android:textColor="@color/white"
+      android:text="系统日期"/>
+
+
+    <com.allen.library.shape.ShapeFrameLayout
+      android:id="@+id/flTime"
+      android:layout_width="@dimen/dp_130"
+      android:layout_height="@dimen/dp_22"
+      android:layout_marginTop="@dimen/dp_10"
+      android:paddingStart="@dimen/dp_10"
+      android:paddingEnd="@dimen/dp_10"
+      app:shapeStrokeWidth="@dimen/dp_1"
+      app:shapeStrokeColor="@color/white"
+      app:shapeSolidColor="@color/colorPrimaryVariant"
+      app:layout_constraintTop_toBottomOf="@id/flDate"
+      app:layout_constraintEnd_toEndOf="parent">
+
+      <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/sp_11"
+        android:textColor="@color/white"
+        android:text=""
+        />
+
+      <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:src="@drawable/ic_clock"/>
+
+    </com.allen.library.shape.ShapeFrameLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/dp_10"
+      app:layout_constraintEnd_toStartOf="@id/flTime"
+      app:layout_constraintTop_toTopOf="@id/flTime"
+      app:layout_constraintBottom_toBottomOf="@id/flTime"
+      android:textSize="@dimen/sp_13"
+      android:textColor="@color/white"
+      android:text="系统时间"/>
+
+    <com.allen.library.shape.ShapeFrameLayout
+      android:id="@+id/flHDMI"
+      android:layout_width="@dimen/dp_130"
+      android:layout_height="@dimen/dp_22"
+      android:layout_marginTop="@dimen/dp_10"
+      android:paddingStart="@dimen/dp_10"
+      android:paddingEnd="@dimen/dp_10"
+      app:shapeStrokeWidth="@dimen/dp_1"
+      app:shapeStrokeColor="@color/white"
+      app:shapeSolidColor="@color/colorPrimaryVariant"
+      app:layout_constraintTop_toBottomOf="@id/flTime"
+      app:layout_constraintEnd_toEndOf="parent">
+
+      <TextView
+        android:id="@+id/tvHDMI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/sp_11"
+        android:textColor="@color/white"
+        android:text=""
+        />
+
+      <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:src="@drawable/ic_down_arrow"/>
+
+    </com.allen.library.shape.ShapeFrameLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/dp_10"
+      app:layout_constraintEnd_toStartOf="@id/flHDMI"
+      app:layout_constraintTop_toTopOf="@id/flHDMI"
+      app:layout_constraintBottom_toBottomOf="@id/flHDMI"
+      android:textSize="@dimen/sp_13"
+      android:textColor="@color/white"
+      android:text="HDMI分辨率"/>
+
+    <LinearLayout
+      android:id="@+id/llMouseSpeed"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center_vertical"
+      android:layout_marginTop="@dimen/dp_15"
+      app:layout_constraintTop_toBottomOf="@id/flHDMI"
+      app:layout_constraintStart_toStartOf="@id/flHDMI"
+      android:orientation="horizontal">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_11"
+        android:textColor="@color/white"
+        android:text="慢"/>
+
+      <SeekBar
+        android:id="@+id/sbMouseSpeed"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="false"
+        android:progressBackgroundTint="@color/white"
+        android:max="100"
+        />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_11"
+        android:textColor="@color/white"
+        android:text="快"/>
+
+    </LinearLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/dp_10"
+      app:layout_constraintEnd_toStartOf="@id/llMouseSpeed"
+      app:layout_constraintTop_toTopOf="@id/llMouseSpeed"
+      app:layout_constraintBottom_toBottomOf="@id/llMouseSpeed"
+      android:textSize="@dimen/sp_13"
+      android:textColor="@color/white"
+      android:text="鼠标指针移动速度"/>
+
+    <com.kyleduo.switchbutton.SwitchButton
+      android:id="@+id/sbPwd"
+      android:layout_width="@dimen/dp_37"
+      android:layout_height="@dimen/dp_20"
+      android:layout_marginTop="@dimen/dp_15"
+      app:layout_constraintTop_toBottomOf="@id/llMouseSpeed"
+      app:layout_constraintStart_toStartOf="@id/llMouseSpeed"
+      android:checked="true"
+      app:kswAnimationDuration="300"
+      app:kswFadeBack="true"
+      app:kswBackDrawable="@drawable/select_switch_button_back"
+      app:kswThumbDrawable="@drawable/select_switch_button_thumb"
+      app:kswThumbMarginBottom="3dp"
+      app:kswThumbMarginLeft="3dp"
+      app:kswThumbMarginRight="3dp"
+      app:kswThumbMarginTop="3dp"
+      app:kswThumbRangeRatio="2"
+      />
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/dp_10"
+      app:layout_constraintEnd_toStartOf="@id/sbPwd"
+      app:layout_constraintTop_toTopOf="@id/sbPwd"
+      app:layout_constraintBottom_toBottomOf="@id/sbPwd"
+      android:textSize="@dimen/sp_13"
+      android:textColor="@color/white"
+      android:text="操作密码"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btnConfirm"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@color/FF03A9F4"
+      android:layout_marginTop="@dimen/dp_50"
+      app:layout_constraintTop_toBottomOf="@id/sbPwd"
+      app:layout_constraintStart_toStartOf="@id/sbPwd"
+      android:textColor="@color/white"
+      android:textSize="@dimen/sp_13"
+      android:text="应用"/>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

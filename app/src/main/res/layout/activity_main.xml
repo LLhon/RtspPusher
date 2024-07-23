@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:keepScreenOn="true"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/clTitleBar"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/dp_45"
+      android:paddingEnd="@dimen/dp_20"
+      android:background="@color/colorPrimary"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clAppName"
+        android:layout_width="@dimen/dp_180"
+        android:layout_height="@dimen/dp_40"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorPrimary">
+
+        <TextView
+          android:id="@+id/tvName"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toStartOf="@id/tvVersion"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintHorizontal_chainStyle="packed"
+          android:text="NVR"
+          android:textStyle="bold"
+          android:textSize="@dimen/sp_25"
+          android:textColor="@color/DBCFFF"/>
+
+        <TextView
+          android:id="@+id/tvVersion"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="5dp"
+          app:layout_constraintStart_toEndOf="@id/tvName"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintBottom_toBottomOf="@id/tvName"
+          android:text="1.0"
+          android:textStyle="bold"
+          android:textSize="@dimen/sp_21"
+          android:textColor="@color/DBCFFF"/>
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+      <LinearLayout
+        android:id="@+id/previewTab"
+        android:layout_width="@dimen/dp_90"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toEndOf="@id/clAppName"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center">
+
+        <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/ic_ipc_camera"/>
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/dp_5"
+          android:textColor="@color/white"
+          android:textSize="@dimen/sp_16"
+          android:text="预览"/>
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/configTab"
+        android:layout_width="@dimen/dp_90"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryVariant"
+        app:layout_constraintStart_toEndOf="@id/previewTab"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center">
+
+        <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/ic_setting"/>
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/dp_5"
+          android:textColor="@color/white"
+          android:textSize="@dimen/sp_16"
+          android:text="配置"/>
+
+      </LinearLayout>
+
+      <ImageView
+        android:id="@+id/ivShutdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/ic_shutdown"/>
+
+      <ImageView
+        android:id="@+id/ivAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_15"
+        app:layout_constraintEnd_toStartOf="@id/ivShutdown"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/ic_about"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+      android:id="@+id/flContainer"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:layout_constraintTop_toBottomOf="@id/clTitleBar"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"/>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/fab"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="60dp"
+    android:layout_marginEnd="60dp"
+    android:layout_gravity="bottom|end"
+    android:visibility="gone"
+    android:src="@android:drawable/ic_input_add" />
+
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/fabPush"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="130dp"
+    android:layout_marginEnd="60dp"
+    android:layout_gravity="bottom|end"
+    android:visibility="gone"
+    android:src="@android:drawable/ic_input_get" />
+
+  <com.ancda.rtsppusher.view.ScreenSleepView
+    android:id="@+id/screenSleepView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone"/>
+
+</FrameLayout>

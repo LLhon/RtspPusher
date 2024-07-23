@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/FF5C6CC3"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <LinearLayout
+    android:id="@+id/llLeftTab"
+    android:layout_width="@dimen/dp_180"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/clSystemConfig"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/dp_40"
+      android:paddingStart="@dimen/dp_20"
+      android:paddingEnd="@dimen/dp_20">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/white"
+        android:text="系统配置"/>
+
+      <ImageView
+        android:layout_width="@dimen/dp_16"
+        android:layout_height="@dimen/dp_16"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_right_arrow"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/clNetConfig"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/dp_40"
+      android:paddingStart="@dimen/dp_20"
+      android:paddingEnd="@dimen/dp_20">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/white"
+        android:text="网络配置"/>
+
+      <ImageView
+        android:layout_width="@dimen/dp_16"
+        android:layout_height="@dimen/dp_16"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_right_arrow"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/clChannelConfig"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/dp_40"
+      android:background="@color/colorPrimaryVariant"
+      android:paddingStart="@dimen/dp_20"
+      android:paddingEnd="@dimen/dp_20">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/white"
+        android:text="通道配置"/>
+
+      <ImageView
+        android:layout_width="@dimen/dp_16"
+        android:layout_height="@dimen/dp_16"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_right_arrow"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+  </LinearLayout>
+
+  <FrameLayout
+    android:id="@+id/flContainer"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryVariant"
+    app:layout_constraintStart_toEndOf="@id/llLeftTab"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:padding="20dp"
+  android:background="@color/colorPrimaryVariant"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <View
+      android:layout_width="@dimen/dp_2"
+      android:layout_height="@dimen/dp_10"
+      android:background="@color/FF03A9F4"/>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="@dimen/dp_3"
+      android:text="已添加设备列表"
+      android:textSize="@dimen/sp_13"
+      android:textColor="@color/white"/>
+
+  </LinearLayout>
+
+  <com.allen.library.shape.ShapeLinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/dp_10"
+    android:paddingStart="@dimen/dp_3"
+    android:paddingEnd="@dimen/dp_3"
+    android:orientation="vertical"
+    app:shapeStrokeWidth="@dimen/dp_1"
+    app:shapeStrokeColor="@color/DBCFFF">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/dp_35"
+      android:paddingStart="@dimen/dp_5">
+
+      <TextView
+        android:id="@+id/tvCustomAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:drawableLeft="@drawable/ic_add"
+        android:drawablePadding="3dp"
+        android:gravity="center"
+        android:text="自定义添加"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/white"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <HorizontalScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:paddingBottom="@dimen/dp_5"
+      android:scrollbarFadeDuration="0"
+      android:fadeScrollbars="false"
+      android:scrollbarSize="@dimen/dp_8"
+      android:scrollbarThumbHorizontal="@color/DBCFFF"
+      android:fillViewport="true">
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp_15"
+        android:orientation="vertical">
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/dp_30"
+          android:orientation="horizontal"
+          android:paddingStart="@dimen/dp_10"
+          android:background="@color/FF3F51B5">
+
+          <LinearLayout
+            android:id="@+id/llChannel"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:drawableLeft="@drawable/shape_ver_line"
+              android:drawablePadding="5dp"
+              android:gravity="center"
+              android:textColor="@color/white"
+              android:textSize="@dimen/sp_12"
+              android:text="通道号"/>
+
+          </LinearLayout>
+
+          <LinearLayout
+            android:id="@+id/llIp"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:drawableLeft="@drawable/shape_ver_line"
+              android:drawablePadding="5dp"
+              android:gravity="center"
+              android:textColor="@color/white"
+              android:textSize="@dimen/sp_12"
+              android:text="IP地址"/>
+
+          </LinearLayout>
+
+          <LinearLayout
+            android:id="@+id/llChannelName"
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:drawableLeft="@drawable/shape_ver_line"
+              android:drawablePadding="5dp"
+              android:gravity="center"
+              android:textColor="@color/white"
+              android:textSize="@dimen/sp_12"
+              android:text="通道名称"/>
+
+          </LinearLayout>
+
+          <LinearLayout
+            android:id="@+id/llStatus"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:drawableLeft="@drawable/shape_ver_line"
+              android:drawablePadding="5dp"
+              android:gravity="center"
+              android:textColor="@color/white"
+              android:textSize="@dimen/sp_12"
+              android:text="状态"/>
+
+          </LinearLayout>
+
+          <LinearLayout
+            android:id="@+id/llPush"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:drawableLeft="@drawable/shape_ver_line"
+              android:drawablePadding="5dp"
+              android:gravity="center"
+              android:textColor="@color/white"
+              android:textSize="@dimen/sp_12"
+              android:text="推流"/>
+
+          </LinearLayout>
+
+          <LinearLayout
+            android:id="@+id/llProtocol"
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:drawableLeft="@drawable/shape_ver_line"
+              android:drawablePadding="5dp"
+              android:gravity="center"
+              android:textColor="@color/white"
+              android:textSize="@dimen/sp_12"
+              android:text="协议(品牌)"/>
+
+          </LinearLayout>
+
+          <LinearLayout
+            android:id="@+id/llOperation"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:drawableLeft="@drawable/shape_ver_line"
+              android:drawablePadding="5dp"
+              android:gravity="center"
+              android:textColor="@color/white"
+              android:textSize="@dimen/sp_12"
+              android:text="操作"/>
+
+          </LinearLayout>
+
+          <LinearLayout
+            android:id="@+id/llDeviceType"
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:drawableLeft="@drawable/shape_ver_line"
+              android:drawablePadding="5dp"
+              android:gravity="center"
+              android:textColor="@color/white"
+              android:textSize="@dimen/sp_12"
+              android:text="设备类型"/>
+
+          </LinearLayout>
+
+          <LinearLayout
+            android:id="@+id/llSerialNo"
+            android:layout_width="@dimen/dp_300"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:drawableLeft="@drawable/shape_ver_line"
+              android:drawablePadding="5dp"
+              android:gravity="center"
+              android:textColor="@color/white"
+              android:textSize="@dimen/sp_12"
+              android:text="序列号"/>
+
+          </LinearLayout>
+
+          <LinearLayout
+            android:id="@+id/llPort"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:drawableLeft="@drawable/shape_ver_line"
+              android:drawablePadding="5dp"
+              android:gravity="center"
+              android:textColor="@color/white"
+              android:textSize="@dimen/sp_12"
+              android:text="管理端口"/>
+
+          </LinearLayout>
+
+          <LinearLayout
+            android:id="@+id/llFirmware"
+            android:layout_width="@dimen/dp_300"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:drawableLeft="@drawable/shape_ver_line"
+              android:drawablePadding="5dp"
+              android:gravity="center"
+              android:textColor="@color/white"
+              android:textSize="@dimen/sp_12"
+              android:text="固件版本"/>
+
+          </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/rv"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:scrollbarFadeDuration="0"
+          android:fadeScrollbars="false"
+          android:scrollbarSize="@dimen/dp_8"
+          android:scrollbarThumbHorizontal="@color/DBCFFF"
+          tools:listitem="@layout/item_channel_list"
+          />
+
+      </LinearLayout>
+
+    </HorizontalScrollView>
+
+  </com.allen.library.shape.ShapeLinearLayout>
+
+</LinearLayout>

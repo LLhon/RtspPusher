@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:paddingStart="@dimen/dp_80"
+  android:paddingTop="@dimen/dp_20"
+  android:background="@color/colorPrimaryVariant"
+  android:orientation="vertical"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <com.allen.library.shape.ShapeFrameLayout
+      android:id="@+id/flWorkMode"
+      android:layout_width="@dimen/dp_130"
+      android:layout_height="@dimen/dp_22"
+      android:layout_marginTop="@dimen/dp_10"
+      android:paddingStart="@dimen/dp_10"
+      android:paddingEnd="@dimen/dp_10"
+      app:shapeStrokeWidth="@dimen/dp_1"
+      app:shapeStrokeColor="@color/white"
+      app:shapeSolidColor="@color/colorPrimaryVariant"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintEnd_toEndOf="parent">
+
+      <TextView
+        android:id="@+id/tvWorkMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/sp_11"
+        android:textColor="@color/white"
+        android:text="网络容错"
+        />
+
+    </com.allen.library.shape.ShapeFrameLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/dp_10"
+      app:layout_constraintEnd_toStartOf="@id/flWorkMode"
+      app:layout_constraintTop_toTopOf="@id/flWorkMode"
+      app:layout_constraintBottom_toBottomOf="@id/flWorkMode"
+      android:textSize="@dimen/sp_13"
+      android:textColor="@color/white"
+      android:text="工作模式"/>
+
+    <com.allen.library.shape.ShapeFrameLayout
+      android:id="@+id/flNetCardSel"
+      android:layout_width="@dimen/dp_130"
+      android:layout_height="@dimen/dp_22"
+      android:layout_marginTop="@dimen/dp_10"
+      android:paddingStart="@dimen/dp_10"
+      android:paddingEnd="@dimen/dp_10"
+      app:shapeStrokeColor="@color/white"
+      app:shapeSolidColor="@color/FF5C6CC3"
+      app:layout_constraintTop_toBottomOf="@id/flWorkMode"
+      app:layout_constraintEnd_toEndOf="parent">
+
+      <TextView
+        android:id="@+id/tvTimeZone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/sp_11"
+        android:textColor="@color/divider_line"
+        android:text="bond0"
+        />
+
+    </com.allen.library.shape.ShapeFrameLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/dp_10"
+      app:layout_constraintEnd_toStartOf="@id/flNetCardSel"
+      app:layout_constraintTop_toTopOf="@id/flNetCardSel"
+      app:layout_constraintBottom_toBottomOf="@id/flNetCardSel"
+      android:textSize="@dimen/sp_13"
+      android:textColor="@color/white"
+      android:text="网卡选择"/>
+
+    <com.allen.library.shape.ShapeFrameLayout
+      android:id="@+id/flNetCardType"
+      android:layout_width="@dimen/dp_130"
+      android:layout_height="@dimen/dp_22"
+      android:layout_marginTop="@dimen/dp_10"
+      android:paddingStart="@dimen/dp_10"
+      android:paddingEnd="@dimen/dp_10"
+      app:shapeStrokeColor="@color/white"
+      app:shapeSolidColor="@color/FF5C6CC3"
+      app:layout_constraintTop_toBottomOf="@id/flNetCardSel"
+      app:layout_constraintEnd_toEndOf="parent">
+
+      <TextView
+        android:id="@+id/tvDateFormat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/sp_11"
+        android:textColor="@color/divider_line"
+        android:text="100M"
+        />
+
+    </com.allen.library.shape.ShapeFrameLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/dp_10"
+      app:layout_constraintEnd_toStartOf="@id/flNetCardType"
+      app:layout_constraintTop_toTopOf="@id/flNetCardType"
+      app:layout_constraintBottom_toBottomOf="@id/flNetCardType"
+      android:textSize="@dimen/sp_13"
+      android:textColor="@color/white"
+      android:text="网卡类型"/>
+
+    <com.kyleduo.switchbutton.SwitchButton
+      android:id="@+id/sbAutoIp"
+      android:layout_width="@dimen/dp_37"
+      android:layout_height="@dimen/dp_20"
+      android:layout_marginTop="@dimen/dp_10"
+      app:layout_constraintTop_toBottomOf="@id/flNetCardType"
+      app:layout_constraintStart_toStartOf="@id/flNetCardType"
+      android:checked="false"
+      app:kswAnimationDuration="300"
+      app:kswFadeBack="true"
+      app:kswBackDrawable="@drawable/select_switch_button_back"
+      app:kswThumbDrawable="@drawable/select_switch_button_thumb"
+      app:kswThumbMarginBottom="3dp"
+      app:kswThumbMarginLeft="3dp"
+      app:kswThumbMarginRight="3dp"
+      app:kswThumbMarginTop="3dp"
+      app:kswThumbRangeRatio="2"
+      />
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/dp_10"
+      app:layout_constraintEnd_toStartOf="@id/sbAutoIp"
+      app:layout_constraintTop_toTopOf="@id/sbAutoIp"
+      app:layout_constraintBottom_toBottomOf="@id/sbAutoIp"
+      android:textSize="@dimen/sp_13"
+      android:textColor="@color/white"
+      android:text="自动获得IP地址(IPv4)"/>
+
+    <com.allen.library.shape.ShapeFrameLayout
+      android:id="@+id/flIp"
+      android:layout_width="@dimen/dp_130"
+      android:layout_height="@dimen/dp_22"
+      android:layout_marginTop="@dimen/dp_10"
+      android:paddingStart="@dimen/dp_10"
+      android:paddingEnd="@dimen/dp_10"
+      app:shapeStrokeWidth="@dimen/dp_1"
+      app:shapeStrokeColor="@color/white"
+      app:shapeSolidColor="@color/colorPrimaryVariant"
+      app:layout_constraintTop_toBottomOf="@id/sbAutoIp"
+      app:layout_constraintEnd_toEndOf="parent">
+
+      <com.ancda.rtsppusher.view.lazykeyboard.SecurityEditText
+        android:id="@+id/etIp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/sp_11"
+        android:textColor="@color/white"
+        android:background="@null"
+        android:hint=""
+        app:chooserSelectedColor="@color/white"
+        app:chooserUnselectedColor="#999999"
+        app:keyboardMode="0"
+        />
+
+    </com.allen.library.shape.ShapeFrameLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/dp_10"
+      app:layout_constraintEnd_toStartOf="@id/flIp"
+      app:layout_constraintTop_toTopOf="@id/flIp"
+      app:layout_constraintBottom_toBottomOf="@id/flIp"
+      android:textSize="@dimen/sp_13"
+      android:textColor="@color/white"
+      android:text="IP地址"/>
+
+
+    <com.allen.library.shape.ShapeFrameLayout
+      android:id="@+id/flSubNetMask"
+      android:layout_width="@dimen/dp_130"
+      android:layout_height="@dimen/dp_22"
+      android:layout_marginTop="@dimen/dp_10"
+      android:paddingStart="@dimen/dp_10"
+      android:paddingEnd="@dimen/dp_10"
+      app:shapeStrokeWidth="@dimen/dp_1"
+      app:shapeStrokeColor="@color/white"
+      app:shapeSolidColor="@color/colorPrimaryVariant"
+      app:layout_constraintTop_toBottomOf="@id/flIp"
+      app:layout_constraintEnd_toEndOf="parent">
+
+      <com.ancda.rtsppusher.view.lazykeyboard.SecurityEditText
+        android:id="@+id/etSubNetMask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/sp_11"
+        android:textColor="@color/white"
+        android:text="255.255.255.0"
+        android:background="@null"
+        android:hint=""
+        app:chooserSelectedColor="@color/white"
+        app:chooserUnselectedColor="#999999"
+        app:keyboardMode="0"
+        />
+
+    </com.allen.library.shape.ShapeFrameLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/dp_10"
+      app:layout_constraintEnd_toStartOf="@id/flSubNetMask"
+      app:layout_constraintTop_toTopOf="@id/flSubNetMask"
+      app:layout_constraintBottom_toBottomOf="@id/flSubNetMask"
+      android:textSize="@dimen/sp_13"
+      android:textColor="@color/white"
+      android:text="子网掩码"/>
+
+    <com.allen.library.shape.ShapeFrameLayout
+      android:id="@+id/flGateway"
+      android:layout_width="@dimen/dp_130"
+      android:layout_height="@dimen/dp_22"
+      android:layout_marginTop="@dimen/dp_10"
+      android:paddingStart="@dimen/dp_10"
+      android:paddingEnd="@dimen/dp_10"
+      app:shapeStrokeWidth="@dimen/dp_1"
+      app:shapeStrokeColor="@color/white"
+      app:shapeSolidColor="@color/colorPrimaryVariant"
+      app:layout_constraintTop_toBottomOf="@id/flSubNetMask"
+      app:layout_constraintEnd_toEndOf="parent">
+
+      <com.ancda.rtsppusher.view.lazykeyboard.SecurityEditText
+        android:id="@+id/etGateway"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/sp_11"
+        android:textColor="@color/white"
+        android:background="@null"
+        android:hint=""
+        app:chooserSelectedColor="@color/white"
+        app:chooserUnselectedColor="#999999"
+        app:keyboardMode="0"
+        />
+
+    </com.allen.library.shape.ShapeFrameLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/dp_10"
+      app:layout_constraintEnd_toStartOf="@id/flGateway"
+      app:layout_constraintTop_toTopOf="@id/flGateway"
+      app:layout_constraintBottom_toBottomOf="@id/flGateway"
+      android:textSize="@dimen/sp_13"
+      android:textColor="@color/white"
+      android:text="默认网关"/>
+
+    <TextView
+      android:id="@+id/tvMac"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/dp_10"
+      app:layout_constraintTop_toBottomOf="@id/flGateway"
+      app:layout_constraintStart_toStartOf="@id/flGateway"
+      android:textSize="@dimen/sp_13"
+      android:textColor="@color/white"
+      android:text=""/>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/dp_10"
+      app:layout_constraintEnd_toStartOf="@id/tvMac"
+      app:layout_constraintTop_toTopOf="@id/tvMac"
+      app:layout_constraintBottom_toBottomOf="@id/tvMac"
+      android:textSize="@dimen/sp_13"
+      android:textColor="@color/white"
+      android:text="MAC地址"/>
+
+    <com.allen.library.shape.ShapeFrameLayout
+      android:id="@+id/flMtu"
+      android:layout_width="@dimen/dp_130"
+      android:layout_height="@dimen/dp_22"
+      android:layout_marginTop="@dimen/dp_10"
+      android:paddingStart="@dimen/dp_10"
+      android:paddingEnd="@dimen/dp_10"
+      app:shapeStrokeWidth="@dimen/dp_1"
+      app:shapeStrokeColor="@color/white"
+      app:shapeSolidColor="@color/colorPrimaryVariant"
+      app:layout_constraintTop_toBottomOf="@id/tvMac"
+      app:layout_constraintEnd_toEndOf="parent">
+
+      <com.ancda.rtsppusher.view.lazykeyboard.SecurityEditText
+        android:id="@+id/etMtu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/sp_11"
+        android:textColor="@color/white"
+        android:text="1500"
+        android:background="@null"
+        android:hint=""
+        app:chooserSelectedColor="@color/white"
+        app:chooserUnselectedColor="#999999"
+        app:keyboardMode="0"
+        />
+
+    </com.allen.library.shape.ShapeFrameLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/dp_10"
+      app:layout_constraintEnd_toStartOf="@id/flMtu"
+      app:layout_constraintTop_toTopOf="@id/flMtu"
+      app:layout_constraintBottom_toBottomOf="@id/flMtu"
+      android:textSize="@dimen/sp_13"
+      android:textColor="@color/white"
+      android:text="MTU（字节）"/>
+
+    <com.allen.library.shape.ShapeFrameLayout
+      android:id="@+id/flMainNetCard"
+      android:layout_width="@dimen/dp_130"
+      android:layout_height="@dimen/dp_22"
+      android:layout_marginTop="@dimen/dp_10"
+      android:paddingStart="@dimen/dp_10"
+      android:paddingEnd="@dimen/dp_10"
+      app:shapeStrokeWidth="@dimen/dp_1"
+      app:shapeStrokeColor="@color/white"
+      app:shapeSolidColor="@color/colorPrimaryVariant"
+      app:layout_constraintTop_toBottomOf="@id/flMtu"
+      app:layout_constraintEnd_toEndOf="parent">
+
+      <TextView
+        android:id="@+id/tvMainNetCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/sp_11"
+        android:textColor="@color/white"
+        android:text="LAN1"
+        />
+
+    </com.allen.library.shape.ShapeFrameLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/dp_10"
+      app:layout_constraintEnd_toStartOf="@id/flMainNetCard"
+      app:layout_constraintTop_toTopOf="@id/flMainNetCard"
+      app:layout_constraintBottom_toBottomOf="@id/flMainNetCard"
+      android:textSize="@dimen/sp_13"
+      android:textColor="@color/white"
+      android:text="主网卡"/>
+
+    <com.kyleduo.switchbutton.SwitchButton
+      android:id="@+id/sbAutoDns"
+      android:layout_width="@dimen/dp_37"
+      android:layout_height="@dimen/dp_20"
+      android:layout_marginTop="@dimen/dp_10"
+      app:layout_constraintTop_toBottomOf="@id/flMainNetCard"
+      app:layout_constraintStart_toStartOf="@id/flMainNetCard"
+      android:checked="false"
+      app:kswAnimationDuration="300"
+      app:kswFadeBack="true"
+      app:kswBackDrawable="@drawable/select_switch_button_back"
+      app:kswThumbDrawable="@drawable/select_switch_button_thumb"
+      app:kswThumbMarginBottom="3dp"
+      app:kswThumbMarginLeft="3dp"
+      app:kswThumbMarginRight="3dp"
+      app:kswThumbMarginTop="3dp"
+      app:kswThumbRangeRatio="2"
+      />
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/dp_10"
+      app:layout_constraintEnd_toStartOf="@id/sbAutoDns"
+      app:layout_constraintTop_toTopOf="@id/sbAutoDns"
+      app:layout_constraintBottom_toBottomOf="@id/sbAutoDns"
+      android:textSize="@dimen/sp_13"
+      android:textColor="@color/white"
+      android:text="自动获取DNS服务器"/>
+
+    <com.allen.library.shape.ShapeFrameLayout
+      android:id="@+id/flDns"
+      android:layout_width="@dimen/dp_130"
+      android:layout_height="@dimen/dp_22"
+      android:layout_marginTop="@dimen/dp_10"
+      android:paddingStart="@dimen/dp_10"
+      android:paddingEnd="@dimen/dp_10"
+      app:shapeStrokeWidth="@dimen/dp_1"
+      app:shapeStrokeColor="@color/white"
+      app:shapeSolidColor="@color/colorPrimaryVariant"
+      app:layout_constraintTop_toBottomOf="@id/sbAutoDns"
+      app:layout_constraintEnd_toEndOf="parent">
+
+      <com.ancda.rtsppusher.view.lazykeyboard.SecurityEditText
+        android:id="@+id/etDns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/sp_11"
+        android:textColor="@color/white"
+        android:background="@null"
+        android:hint=""
+        app:chooserSelectedColor="@color/white"
+        app:chooserUnselectedColor="#999999"
+        app:keyboardMode="0"
+        />
+
+    </com.allen.library.shape.ShapeFrameLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/dp_10"
+      app:layout_constraintEnd_toStartOf="@id/flDns"
+      app:layout_constraintTop_toTopOf="@id/flDns"
+      app:layout_constraintBottom_toBottomOf="@id/flDns"
+      android:textSize="@dimen/sp_13"
+      android:textColor="@color/white"
+      android:text="首选DNS服务器"/>
+
+    <com.allen.library.shape.ShapeFrameLayout
+      android:id="@+id/flDns2"
+      android:layout_width="@dimen/dp_130"
+      android:layout_height="@dimen/dp_22"
+      android:layout_marginTop="@dimen/dp_10"
+      android:paddingStart="@dimen/dp_10"
+      android:paddingEnd="@dimen/dp_10"
+      app:shapeStrokeWidth="@dimen/dp_1"
+      app:shapeStrokeColor="@color/white"
+      app:shapeSolidColor="@color/colorPrimaryVariant"
+      app:layout_constraintTop_toBottomOf="@id/flDns"
+      app:layout_constraintEnd_toEndOf="parent">
+
+      <com.ancda.rtsppusher.view.lazykeyboard.SecurityEditText
+        android:id="@+id/etDns2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textSize="@dimen/sp_11"
+        android:textColor="@color/white"
+        android:background="@null"
+        android:hint=""
+        app:chooserSelectedColor="@color/white"
+        app:chooserUnselectedColor="#999999"
+        app:keyboardMode="0"
+        />
+
+    </com.allen.library.shape.ShapeFrameLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/dp_10"
+      app:layout_constraintEnd_toStartOf="@id/flDns2"
+      app:layout_constraintTop_toTopOf="@id/flDns2"
+      app:layout_constraintBottom_toBottomOf="@id/flDns2"
+      android:textSize="@dimen/sp_13"
+      android:textColor="@color/white"
+      android:text="备用DNS服务器"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btnConfirm"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@color/FF03A9F4"
+      android:layout_marginTop="@dimen/dp_30"
+      app:layout_constraintTop_toBottomOf="@id/flDns2"
+      app:layout_constraintStart_toStartOf="@id/flDns2"
+      android:textColor="@color/white"
+      android:textSize="@dimen/sp_13"
+      android:text="应用"/>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

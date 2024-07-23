@@ -1,0 +1,70 @@
+<resources>
+  <string name="app_name">NVR</string>
+  
+  <string-array name="ProtocolList">
+    <item>ONVIF</item>
+  </string-array>
+  
+  <string-array name="TransportList">
+    <item>自动</item>
+    <item>TCP</item>
+    <item>UDP</item>
+  </string-array>
+
+  <string-array name="ChannelList">
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+    <item>5</item>
+    <item>6</item>
+    <item>7</item>
+    <item>8</item>
+    <item>9</item>
+    <item>10</item>
+    <item>11</item>
+    <item>12</item>
+    <item>13</item>
+    <item>14</item>
+    <item>15</item>
+    <item>16</item>
+    <item>17</item>
+    <item>18</item>
+    <item>19</item>
+    <item>20</item>
+    <item>21</item>
+    <item>22</item>
+    <item>23</item>
+    <item>24</item>
+    <item>25</item>
+    <item>26</item>
+    <item>27</item>
+    <item>28</item>
+    <item>29</item>
+    <item>30</item>
+    <item>31</item>
+    <item>32</item>
+  </string-array>
+  <string-array name="ScreenSleepDuration">
+    <item>30秒</item>
+    <item>1分钟</item>
+    <item>3分钟</item>
+    <item>5分钟</item>
+    <item>10分钟</item>
+  </string-array>
+
+  <string name="aToz">abcdefghijklmnopqrstuvwxyz</string>
+  <string name="zeroToNine">1234567890</string>
+  <string name="title_letter">字母</string>
+  <string name="title_symbol">符号</string>
+  <string name="title_number">数字</string>
+  <string name="exception_invalid_keyboard">无效的键盘类型</string>
+  <string name="machine_bind_title">终端绑定</string>
+  <string name="machine_bind_device_id">本机设备ID：%s</string>
+  <string name="machine_bind_path">1、请先在幼儿园管理平台绑定终端，路径如下：</string>
+  <string name="machine_bind_address">幼儿园管理平台 \\ 硬件管理 \\ NVR设置</string>
+  <string name="machine_bind_net_config">2、绑定完成后请将终端连接网络再点击开始配置</string>
+  <string name="machine_start_config">开始配置</string>
+  <string name="dialog_content_loading">加载中...</string>
+
+</resources>
